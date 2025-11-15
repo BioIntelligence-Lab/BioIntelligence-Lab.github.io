@@ -1,96 +1,259 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>BioIntelligence Research Lab</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioIntelligence Lab</title>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: #222;
+      line-height: 1.6;
+      background: #ffffff;
+    }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="image main"><img src="images/Lab_logo3.png" alt =""></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>BioIntelligence Research Lab</h1>
-								<p>Engineering the future of Biomedicine</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#Research">Research</a></li>
-								<li><a href="#Education">Education</a></li>
-								<li><a href="#Fun">Fun</a></li>
-								<li><a href="#About">About</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+    /* NAVIGATION BAR */
+    nav {
+      width: 100%;
+      padding: 20px 40px;
+      box-sizing: border-box;
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.90);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+    }
 
-				<!-- Main -->
-					<div id="main">
+    nav .logo {
+      font-size: 1.4em;
+      font-weight: 700;
+      color: #003d99;
+    }
 
-						
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
 
-						<!-- Contact -->
-							<article id="Contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								
-							</article>
+    nav ul li a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
 
-						
-							
+    nav ul li a:hover {
+      color: #003d99;
+    }
 
-					</div>
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 140px 20px 120px;
+      background: #f7f9fc;
+    }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; BioIntelligence-Research-Lab Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+    .hero h1 {
+      font-size: 3.0em;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #111;
+    }
 
-			</div>
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.25em;
+      color: #666;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-		<!-- BG -->
-			<div id="bg"></div>
+    /* SECTION HEADERS */
+    h2.section-title {
+      text-align: center;
+      margin-top: 80px;
+      margin-bottom: 40px;
+      font-size: 2em;
+      font-weight: 600;
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    /* THREE PILLAR CARDS */
+    .pillars {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 0 20px;
+    }
 
-	</body>
+    .pillar-card {
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border-radius: 10px;
+      width: 330px;
+      padding: 30px;
+      text-align: left;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+
+    .pillar-card h3 {
+      margin-top: 0;
+      font-size: 1.3em;
+      color: #003d99;
+    }
+
+    .pillar-card p {
+      margin: 15px 0 25px;
+      color: #444;
+    }
+
+    .pillar-card a {
+      color: #0055cc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* FEATURED TOOLS */
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 35px;
+      padding: 20px;
+      margin-bottom: 50px;
+    }
+
+    .tool-card {
+      background: #ffffff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 25px 30px;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    }
+
+    .tool-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .tool-card h3 {
+      margin-top: 0;
+      color: #003d99;
+    }
+
+    .tool-card a {
+      margin-top: 10px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+      color: #0055cc;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #f1f3f6;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="logo">BioIntelligence Lab</div>
+    <ul>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#tools">Software</a></li>
+      <li><a href="#people">People</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>BioIntelligence Lab</h1>
+    <p>Advancing AI, medical imaging, and computational healthcare through foundational AI, disease modeling, and intelligent informatics.</p>
+  </section>
+
+  <!-- RESEARCH AREAS -->
+  <h2 class="section-title" id="research">Research Areas</h2>
+
+  <div class="pillars">
+    <div class="pillar-card">
+      <h3>Fundamental AI Research</h3>
+      <p>Fundamental AI Research explores the foundations of next-generation medical AI systems, including lifelong learning, trustworthy AI, robustness auditing, and clinical safety. Focus areas include Shared Experience Lifelong Learning (ShELL), bias evaluation, and safe deployment of generative AI.</p>
+      <a href="fundamental-ai.html">Learn More →</a>
+    </div>
+
+    <div class="pillar-card">
+      <h3>Biomedical Imaging Research</h3>
+      <p>Biomedical Imaging Research investigates hidden patterns in medical images to uncover disease mechanisms and population-level health trends. Focus areas include computational disease modeling, tumor connectomics, radiogenomics, treatment response modeling, and opportunistic population health biomarkers.</p>
+      <a href="biomedical-imaging.html">Learn More →</a>
+    </div>
+
+    <div class="pillar-card">
+      <h3>Informatics & Tooling</h3>
+      <p>Informatics & Tooling focuses on scalable, open-source infrastructure for efficient access, analysis, and deployment of medical imaging AI. Featured tools include MIST for image streaming and VoxelInsight for conversational imaging analysis.</p>
+      <a href="informatics.html">Learn More →</a>
+    </div>
+  </div>
+
+  <!-- FEATURED TOOLS -->
+  <h2 class="section-title" id="tools">Featured Tools</h2>
+
+  <div class="tools">
+
+    <div class="tool-card">
+      <img src="assets/mist_icon.png" alt="MIST Logo">
+      <h3>MIST</h3>
+      <p>Medical Image Streaming Toolkit</p>
+      <a href="mist.html">Learn More →</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="assets/voxelinsight_logo.png" alt="VoxelInsight Logo">
+      <h3>VoxelInsight</h3>
+      <p>Conversational Imaging Analysis Platform</p>
+      <a href="voxelinsight.html">Learn More →</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <p>© 2025 BioIntelligence Lab · UTHealth Houston</p>
+    <p>Contact: vishwa.s.parekh@uth.tmc.edu</p>
+  </footer>
+
+</body>
 </html>
