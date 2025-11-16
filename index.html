@@ -1,258 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BioIntelligence Lab</title>
 
   <style>
     body {
       margin: 0;
-      font-family: "Inter", sans-serif;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       color: #222;
-      line-height: 1.6;
       background: #ffffff;
+      line-height: 1.6;
     }
 
-    /* NAVIGATION BAR */
-    nav {
-      width: 100%;
-      padding: 20px 40px;
-      box-sizing: border-box;
-      position: sticky;
-      top: 0;
-      background: rgba(255,255,255,0.90);
-      backdrop-filter: blur(8px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      z-index: 1000;
+    /* Header */
+    header {
+      padding: 50px 20px 40px;
+      text-align: center;
     }
 
-    nav .logo {
-      font-size: 1.4em;
-      font-weight: 700;
-      color: #003d99;
+    header img {
+      width: 90px;
+      margin-bottom: 20px;
+      opacity: 0.95;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
+    h1 {
+      font-size: 2.4rem;
       margin: 0;
-      padding: 0;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #222;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    nav ul li a:hover {
-      color: #003d99;
-    }
-
-    /* HERO SECTION */
-    .hero {
-      text-align: center;
-      padding: 140px 20px 120px;
-      background: #f7f9fc;
-    }
-
-    .hero h1 {
-      font-size: 3.0em;
       font-weight: 700;
-      margin-bottom: 10px;
-      color: #111;
     }
 
-    .hero p {
+    .tagline {
       margin-top: 10px;
-      font-size: 1.25em;
-      color: #666;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 1.25rem;
+      color: #555;
+      font-weight: 400;
     }
 
-    /* SECTION HEADERS */
-    h2.section-title {
-      text-align: center;
-      margin-top: 80px;
-      margin-bottom: 40px;
-      font-size: 2em;
+    /* Main Sections */
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 25px;
+    }
+
+    .vertical {
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .vertical h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
       font-weight: 600;
     }
 
-    /* THREE PILLAR CARDS */
-    .pillars {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 0 20px;
-    }
-
-    .pillar-card {
-      background: #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      border-radius: 10px;
-      width: 330px;
-      padding: 30px;
-      text-align: left;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .pillar-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-    }
-
-    .pillar-card h3 {
+    .vertical p {
       margin-top: 0;
-      font-size: 1.3em;
-      color: #003d99;
-    }
-
-    .pillar-card p {
-      margin: 15px 0 25px;
+      font-size: 1.05rem;
       color: #444;
     }
 
-    .pillar-card a {
-      color: #0055cc;
+    /* Button Links */
+    .link-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      background: #0055cc;
+      color: #fff;
       text-decoration: none;
-      font-weight: 600;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: background 0.25s;
     }
 
-    /* FEATURED TOOLS */
-    .tools {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 35px;
-      padding: 20px;
-      margin-bottom: 50px;
+    .link-btn:hover {
+      background: #003f99;
+    }
+
+    /* Tools Section */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 35px;
     }
 
     .tool-card {
-      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
       border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 25px 30px;
-      width: 260px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      transition: transform 0.2s, box-shadow 0.2s;
+      text-align: left;
+      transition: box-shadow 0.25s;
     }
 
     .tool-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.10);
-    }
-
-    .tool-card img {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-      margin-bottom: 15px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     }
 
     .tool-card h3 {
       margin-top: 0;
-      color: #003d99;
-    }
-
-    .tool-card a {
-      margin-top: 10px;
-      display: inline-block;
-      text-decoration: none;
+      font-size: 1.3rem;
       font-weight: 600;
-      color: #0055cc;
     }
 
-    /* FOOTER */
-    footer {
-      background: #f1f3f6;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #777;
-      margin-top: 60px;
+    .tool-card p {
+      font-size: 0.95rem;
+      color: #555;
     }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      padding: 25px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+
+    footer a {
+      color: #0055cc;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION BAR -->
-  <nav>
-    <div class="logo">BioIntelligence Lab</div>
-    <ul>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#tools">Software</a></li>
-      <li><a href="#people">People</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
+  <!-- HEADER -->
+  <header>
+    <img src="assets/lab_logo.png" alt="BioIntelligence Lab Logo">
     <h1>BioIntelligence Lab</h1>
-    <p>Advancing AI, medical imaging, and computational healthcare through foundational AI, disease modeling, and intelligent informatics.</p>
+    <p class="tagline">Understanding biological systems with artificial intelligence</p>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <section>
+
+    <!-- FUNDAMENTAL AI -->
+    <div class="vertical">
+      <h2>Fundamental AI</h2>
+      <p>
+        Developing the core AI methods needed to understand complex biological systems.
+        Our work spans lifelong learning <strong>(ShELL)</strong>, counterfactual modeling,
+        AI safety and trustworthiness, and autonomous agentic systems capable of scientific reasoning.
+      </p>
+      <a class="link-btn" href="fundamental-ai.html">Learn more</a>
+    </div>
+
+    <!-- BIOMEDICAL DISCOVERY -->
+    <div class="vertical">
+      <h2>Computational Biomedical Discovery</h2>
+      <p>
+        Using AI to uncover mechanistic signatures of disease and population health.
+        We model how diseases evolve, how treatments work, and how clinical imaging can reveal
+        hidden biological patterns across individuals and populations.
+      </p>
+      <a class="link-btn" href="biomedical-discovery.html">Learn more</a>
+    </div>
+
+    <!-- INFORMATICS SYSTEMS -->
+    <div class="vertical">
+      <h2>Computational Systems & Informatics</h2>
+      <p>
+        Building tools that enable scientific discovery at scale.  
+        These systems make imaging research faster, reproducible, and more accessible —
+        supporting both our AI foundations and biomedical discovery efforts.
+      </p>
+      <a class="link-btn" href="informatics.html">Learn more</a>
+
+      <div class="tools-grid">
+        <div class="tool-card">
+          <h3>VoxelInsight</h3>
+          <p>An agentic imaging analysis platform that automates common workflows and accelerates discovery.</p>
+          <a class="link-btn" href="https://github.com/BioIntelligence-Lab/VoxelInsight">GitHub</a>
+        </div>
+
+        <div class="tool-card">
+          <h3>MIST</h3>
+          <p>The Medical Image Streaming Toolkit — a format-agnostic framework for efficient access to large imaging datasets.</p>
+          <a class="link-btn" href="https://biointelligence-lab.github.io/MIST/">Project Page</a>
+        </div>
+
+        <div class="tool-card">
+          <h3>ISLE</h3>
+          <p>Intelligent streaming framework for clinical AI inference using progressive resolution optimization.</p>
+          <a class="link-btn" href="https://github.com/BioIntelligence-Lab/IntelligentStreaming">GitHub</a>
+        </div>
+      </div>
+    </div>
+
   </section>
 
-  <!-- RESEARCH AREAS -->
-  <h2 class="section-title" id="research">Research Areas</h2>
-
-  <div class="pillars">
-    <div class="pillar-card">
-      <h3>Fundamental AI Research</h3>
-      <p>Fundamental AI Research explores the foundations of next-generation medical AI systems, including lifelong learning, trustworthy AI, robustness auditing, and clinical safety. Focus areas include Shared Experience Lifelong Learning (ShELL), bias evaluation, and safe deployment of generative AI.</p>
-      <a href="fundamental-ai.html">Learn More →</a>
-    </div>
-
-    <div class="pillar-card">
-      <h3>Biomedical Imaging Research</h3>
-      <p>Biomedical Imaging Research investigates hidden patterns in medical images to uncover disease mechanisms and population-level health trends. Focus areas include computational disease modeling, tumor connectomics, radiogenomics, treatment response modeling, and opportunistic population health biomarkers.</p>
-      <a href="biomedical-imaging.html">Learn More →</a>
-    </div>
-
-    <div class="pillar-card">
-      <h3>Informatics & Tooling</h3>
-      <p>Informatics & Tooling focuses on scalable, open-source infrastructure for efficient access, analysis, and deployment of medical imaging AI. Featured tools include MIST for image streaming and VoxelInsight for conversational imaging analysis.</p>
-      <a href="informatics.html">Learn More →</a>
-    </div>
-  </div>
-
-  <!-- FEATURED TOOLS -->
-  <h2 class="section-title" id="tools">Featured Tools</h2>
-
-  <div class="tools">
-
-    <div class="tool-card">
-      <img src="assets/mist_icon.png" alt="MIST Logo">
-      <h3>MIST</h3>
-      <p>Medical Image Streaming Toolkit</p>
-      <a href="mist.html">Learn More →</a>
-    </div>
-
-    <div class="tool-card">
-      <img src="assets/voxelinsight_logo.png" alt="VoxelInsight Logo">
-      <h3>VoxelInsight</h3>
-      <p>Conversational Imaging Analysis Platform</p>
-      <a href="voxelinsight.html">Learn More →</a>
-    </div>
-
-  </div>
-
   <!-- FOOTER -->
-  <footer id="contact">
-    <p>© 2025 BioIntelligence Lab · UTHealth Houston</p>
-    <p>Contact: vishwa.s.parekh@uth.tmc.edu</p>
+  <footer>
+    © 2025 BioIntelligence Lab · UTHealth Houston  
+    <br><br>
+    <a href="https://vishwaparekh.github.io/">Website</a> |
+    <a href="https://scholar.google.com/citations?user=ZCJQ-ZMAAAAJ&hl=en">Google Scholar</a> |
+    <a href="https://github.com/BioIntelligence-Lab">GitHub</a>
   </footer>
 
 </body>
