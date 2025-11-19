@@ -1,207 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fundamental AI — BioIntelligence Lab</title>
+---
+layout: default
+title: Fundamental AI
+---
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Inter", sans-serif;
-      color: #222;
-      line-height: 1.6;
-      background: #ffffff;
-    }
+<section class="header-block">
+  <h1>Fundamental AI Research</h1>
+  <p>
+    Advancing the foundations of Artificial Intelligence through safety, trustworthiness, human–AI ecosystems, and
+    multi-agent autonomy — exploring how intelligent systems learn, collaborate, and evolve over time.
+  </p>
+</section>
 
-    /* NAVIGATION BAR (same as homepage) */
-    nav {
-      width: 100%;
-      padding: 20px 40px;
-      box-sizing: border-box;
-      position: sticky;
-      top: 0;
-      background: rgba(255,255,255,0.90);
-      backdrop-filter: blur(8px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      z-index: 1000;
-    }
+<!-- AI SAFETY -->
+<h2 class="section-title">AI Safety & Trustworthiness</h2>
 
-    nav .logo img {
-      height: 45px;
-      cursor: pointer;
-    }
+<div class="content-block">
+  <p>
+    We develop methods to ensure AI systems are reliable, transparent, and equitable — addressing bias, uncertainty,
+    robustness to real-world clinical variation, security vulnerabilities, demographic leakage, and safe use of
+    generative AI in radiology and beyond.
+  </p>
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
-    }
+  <div class="placeholder-img">[ Placeholder: Diagram — Bias / Robustness / Security ]</div>
+</div>
 
-    nav ul li a {
-      text-decoration: none;
-      color: #222;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
+<!-- HUMAN-AI ECOSYSTEM -->
+<h2 class="section-title">Human–AI Ecosystem</h2>
 
-    nav ul li a:hover {
-      color: #003d99;
-    }
+<div class="content-block">
+  <p>
+    We investigate how AI systems can collaborate with each other and with humans — learning across sites, agents,
+    and tasks. This includes the development of SheLL (Shared Experience Lifelong Learning), multi-agent reasoning,
+    and foundations for autonomous research workflows.
+  </p>
 
-    /* PAGE HEADER */
-    .header-block {
-      text-align: center;
-      padding: 120px 20px 80px;
-      background: #f7f9fc;
-    }
-
-    .header-block h1 {
-      font-size: 2.6em;
-      margin-bottom: 10px;
-      font-weight: 700;
-      color: #111;
-    }
-
-    .header-block p {
-      font-size: 1.2em;
-      color: #555;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* SECTION TITLE */
-    h2.section-title {
-      text-align: center;
-      margin-top: 70px;
-      margin-bottom: 25px;
-      font-size: 1.9em;
-      font-weight: 600;
-    }
-
-    /* CONTENT SECTIONS */
-    .content-block {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 10px 20px 40px;
-      color: #333;
-      font-size: 1.05em;
-    }
-
-    .placeholder-img {
-      width: 100%;
-      height: 220px;
-      background: #e9eef5;
-      border-radius: 8px;
-      margin: 30px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #708090;
-      font-size: 1.1em;
-      font-style: italic;
-    }
-
-    /* PUBLICATION LIST */
-    .pub-section h3 {
-      margin-top: 40px;
-      font-size: 1.3em;
-      color: #003d99;
-    }
-
-    .pub-section ul {
-      margin-top: 10px;
-      line-height: 1.55;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- NAVIGATION BAR -->
-  <nav>
-    <div class="logo">
-      <a href="index.html">
-        <img src="https://github.com/BioIntelligence-Lab/BioIntelligence-Lab.github.io/blob/main/images/Lab_logo3.png?raw=true" alt="Lab Logo">
-      </a>
-    </div>
-
-    <ul>
-      <li><a href="index.html#research">Research</a></li>
-      <li><a href="index.html#tools">Software</a></li>
-      <li><a href="index.html#people">People</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HEADER -->
-  <section class="header-block">
-    <h1>Fundamental AI Research</h1>
-    <p>
-      Advancing the foundations of Artificial Intelligence through safety, trustworthiness, human–AI ecosystems, 
-      and multi-agent autonomy. Our work pushes beyond application-driven AI to explore how intelligent systems 
-      learn, collaborate, and evolve over time.
-    </p>
-  </section>
-
-  <!-- AI SAFETY -->
-  <h2 class="section-title">AI Safety & Trustworthiness</h2>
-
-  <div class="content-block">
-    <p>
-      This sub-area focuses on ensuring AI systems are reliable, transparent, and equitable. 
-      We investigate algorithmic bias, uncertainty modeling, robustness to real-world variation, 
-      security vulnerabilities, demographic leakage in foundation models, and safe use of generative AI 
-      in clinical decision-making.
-    </p>
-
-    <div class="placeholder-img">[ Placeholder: Diagram on AI Safety / Bias / Robustness ]</div>
-
-    <div class="pub-section">
-      <h3>Representative Publications</h3>
-      <ul>
-        <li>Beheshtian et al., Radiology, 2022 — Bias in pediatric bone age prediction.</li>
-        <li>Bachina et al., Radiology, 2023 — Coarse race labels masking underdiagnosis patterns.</li>
-        <li>Santomartino et al., Radiology: AI, 2024 — Stress testing and robustness evaluation.</li>
-        <li>Trang et al., Emergency Radiology, 2024 — Sociodemographic bias in ICH detection.</li>
-        <li>Kavandi et al., AJR, 2024 — Predictability of demographics from chest radiographs.</li>
-        <li>Santomartino et al., Radiology, 2024 — Bias in NLP tools for radiology reports.</li>
-        <li>Garin, Parekh, Sulam, Yi et al., Nature Medicine, 2023 — Need for demographic transparency.</li>
-        <li>Yi et al., Radiology, 2025 — Best practices for evaluating algorithmic bias.</li>
-        <li>Zheng, Jacobs, Parekh et al., arXiv, 2024 — Demographic predictability in CT embeddings.</li>
-        <li>Zheng, Jacobs, Braverman, Parekh et al., arXiv, 2025 — Adversarial debiasing in CT models.</li>
-        <li>Kulkarni et al., MIDL, 2024 — Hidden-in-plain-sight imperceptible bias attacks.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- HUMAN–AI ECOSYSTEM -->
-  <h2 class="section-title">Human–AI Ecosystem Modeling</h2>
-
-  <div class="content-block">
-    <p>
-      We study how humans and AI systems can learn from each other, share experience, collaborate across institutions, 
-      and form collective intelligence. This includes the development of SheLL (Shared Experience Lifelong Learning), 
-      multi-agent reasoning frameworks, and the foundations needed to build autonomous research workflows.
-    </p>
-
-    <div class="placeholder-img">[ Placeholder: SheLL / Multi-Agent Collaboration Diagram ]</div>
-
-    <div class="pub-section">
-      <h3>Representative Publications</h3>
-      <ul>
-        <li>Uwaeze, Kulkarni, Braverman, Jacobs, Parekh, ICCV 2025 — Counterfactual augmentation for equitable learning.</li>
-        <li>Kulkarni et al., MIDL 2024 — Stealth bias attacks informing ecosystem resilience.</li>
-        <!-- Add more as papers emerge -->
-      </ul>
-    </div>
-  </div>
-
-</body>
-</html>
+  <div class="placeholder-img">[ Placeholder: Diagram — SheLL / Multi-Agent Learning ]</div>
+</div>
