@@ -146,6 +146,38 @@ body {
 .btn-primary:hover {
   background: #002f73;
 }
+.btn-container {
+      margin-top: 25px;
+    }
+.btn {
+  display: inline-block;
+  background: #0055cc;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin: 6px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.btn:hover { background: #003f99; }
+section {
+  width: 85%;
+  max-width: 950px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table th, table td {
+      border-bottom: 1px solid #eee;
+      text-align: left;
+      padding: 10px;
+    }
 
 /* Pillars / cards */
 .section-title {
