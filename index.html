@@ -1,273 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BioIntelligence Lab</title>
+---
+layout: default
+title: BioIntelligence Lab
+---
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Inter", sans-serif;
-      color: #222;
-      line-height: 1.6;
-      background: #ffffff;
-    }
+<section class="hero">
+  <h1>BioIntelligence Lab</h1>
+  <p class="subtitle">Understanding biological systems with Artificial Intelligence.</p>
 
-    /* NAVIGATION BAR */
-    nav {
-      width: 100%;
-      padding: 15px 40px;
-      box-sizing: border-box;
-      position: sticky;
-      top: 0;
-      background: rgba(255,255,255,0.90);
-      backdrop-filter: blur(8px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      z-index: 1000;
-    }
+  <p class="lead">
+    We develop AI methods and imaging-based models to reveal hidden structure in disease and population health.
+    Our work spans foundational AI, computational biomedical discovery, and the informatics tools that make
+    these advances usable in practice.
+  </p>
 
-    nav .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+  <a href="{{ '/research/biomedical-imaging/' | relative_url }}" class="btn-primary">
+    Explore our research
+  </a>
+</section>
 
-    nav .brand img {
-      height: 42px;
-      width: auto;
-    }
-
-    nav .brand .title {
-      font-size: 1.4em;
-      font-weight: 700;
-      color: #003d99;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #222;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    nav ul li a:hover {
-      color: #003d99;
-    }
-
-    /* HERO SECTION */
-    .hero {
-      text-align: center;
-      padding: 140px 20px 120px;
-      background: #f7f9fc;
-    }
-
-    .hero h1 {
-      font-size: 3.0em;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: #111;
-    }
-
-    .hero p {
-      margin-top: 10px;
-      font-size: 1.25em;
-      color: #666;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #0055cc;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 500;
-      margin-top: 30px;
-      transition: background 0.3s;
-    }
-    .btn-primary:hover {
-      background: #003f99;
-    }
-
-    /* SECTION HEADERS */
-    h2.section-title {
-      text-align: center;
-      margin-top: 80px;
-      margin-bottom: 40px;
-      font-size: 2em;
-      font-weight: 600;
-    }
-
-    /* THREE PILLAR CARDS */
-    .pillars {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 0 20px;
-    }
-
-    .pillar-card {
-      background: #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      border-radius: 10px;
-      width: 300px;
-      padding: 30px;
-      text-align: left;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .pillar-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-    }
-
-    .pillar-card h3 {
-      margin-top: 0;
-      font-size: 1.3em;
-      color: #003d99;
-    }
-
-    .pillar-card p {
-      margin: 15px 0 25px;
-      color: #444;
-    }
-
-    .pillar-card a {
-      color: #0055cc;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    /* FEATURED TOOLS */
-    .tools {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      padding: 20px;
-      margin-bottom: 50px;
-    }
-
-    .tool-card {
-      background: #f7f9fc;
-      border-radius: 10px;
-      padding: 25px 30px;
-      width: 260px;
-      text-align: center;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-    }
-
-    /* FOOTER */
-    footer {
-      background: #f1f3f6;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #777;
-      margin-top: 60px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- NAVIGATION BAR WITH LOGO -->
-  <nav>
-    <div class="brand">
-      <img src="images/Lab_logo3.png" alt="BioIntelligence Lab Logo">
-      <div class="title">BioIntelligence Lab</div>
-    </div>
-
-    <ul>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#tools">Software</a></li>
-      <li><a href="#people">People</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <h1>BioIntelligence Lab</h1>
-    <p>Understanding biological systems with artificial intelligence.</p>
-    <a href="#research" class="btn-primary">Explore Our Research</a>
-  </section>
-
-  <!-- RESEARCH AREAS -->
-  <h2 class="section-title" id="research">Research Areas</h2>
-
-  <div class="pillars">
-
-    <!-- Fundamental AI -->
+<section>
+  <h2 class="section-title">Research Pillars</h2>
+  <div class="pillar-grid">
     <div class="pillar-card">
-      <h3>Fundamental AI Research</h3>
-      <p> This research vertical focuses on developing the core AI methods needed to understand complex biological systems.
-        Our work spans lifelong learning <strong>(ShELL)</strong>, counterfactual modeling,
-        AI safety and trustworthiness, and autonomous agentic systems capable of scientific reasoning.</p>
-      <a href="fundamental-ai.html">Learn More →</a>
+      <h3>Fundamental AI</h3>
+      <p>
+        Algorithms for safe, trustworthy, and collaborative AI systems, including bias modeling,
+        uncertainty, and human–AI ecosystems such as SheLL.
+      </p>
+      <a href="{{ '/research/fundamental-ai/' | relative_url }}">Learn more →</a>
     </div>
 
-    <!-- Biomedical Discovery -->
     <div class="pillar-card">
       <h3>Computational Biomedical Discovery</h3>
-      <p> This research vertical focuses on using AI to uncover mechanistic signatures of disease and population health.
-        Our work focuses on modeling how diseases evolve, how treatments work, and how clinical imaging can reveal
-        hidden biological patterns across individuals and populations.</p>
-      <a href="biomedical-discovery.html">Learn More →</a>
+      <p>
+        Imaging-based models that characterize disease mechanisms and population-level patterns, from tumor
+        connectomics to opportunistic screening and dementia risk.
+      </p>
+      <a href="{{ '/research/biomedical-imaging/' | relative_url }}">Learn more →</a>
     </div>
 
-    <!-- Informatics -->
     <div class="pillar-card">
-      <h3>Computational Systems & Informatics</h3>
-      <p>This research vertical focuses on building tools that enable scientific discovery at scale.  
-        These systems make imaging research faster, reproducible, and more accessible —
-        supporting both our AI foundations and biomedical discovery efforts.</p>
-      <a href="informatics.html">Learn More →</a>
-    </div>
-
-  </div>
-
-  <!-- TOOLS -->
-  <h2 class="section-title" id="tools">Featured Tools</h2>
-
-  <div class="tools">
-    <div class="tool-card">
-      <h3>MIST</h3>
-      <p>Medical Image Streaming Toolkit for resource-efficient imaging AI.</p>
-    </div>
-
-    <div class="tool-card">
-      <h3>VoxelInsight</h3>
-      <p>An agentic imaging platform for automated analysis and scientific workflows.</p>
-    </div>
-
-    <div class="tool-card">
-      <h3>ISLE</h3>
-      <p>Intelligent streaming for clinical AI inference using progressive encoding.</p>
+      <h3>Informatics &amp; Tools</h3>
+      <p>
+        Software platforms such as MIST and VoxelInsight that enable scalable data access, analysis, and
+        automated research workflows in medical imaging.
+      </p>
+      <a href="{{ '/research/informatics/' | relative_url }}">Learn more →</a>
     </div>
   </div>
-
-  <!-- FOOTER -->
-  <footer id="contact">
-    <p>© 2025 BioIntelligence Lab · UTHealth Houston</p>
-    <p>Contact: vishwa.s.parekh@uth.tmc.edu</p>
-  </footer>
-
-</body>
-</html>
+</section>
